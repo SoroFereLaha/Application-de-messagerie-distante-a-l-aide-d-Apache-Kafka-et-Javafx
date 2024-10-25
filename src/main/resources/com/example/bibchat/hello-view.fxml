@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Priority?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.bibchat.BibChatController" minHeight="300" minWidth="400">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <VBox VBox.vgrow="ALWAYS">
+        <SplitPane orientation="HORIZONTAL" VBox.vgrow="ALWAYS">
+            <VBox spacing="10.0" fx:id="leftVBox" VBox.vgrow="ALWAYS">
+                <TextField fx:id="inputTextField" promptText="Entrer votre message"/>
+                <Button text="Envoyer" onAction="#on_click"/>
+            </VBox>
+
+            <VBox spacing="10.0" fx:id="rightVBox" VBox.vgrow="ALWAYS">
+                <TextArea fx:id="outputTextArea" editable="false" VBox.vgrow="ALWAYS"/>
+            </VBox>
+        </SplitPane>
+    </VBox>
+</VBox>
